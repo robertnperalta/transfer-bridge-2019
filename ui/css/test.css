@@ -78,6 +78,7 @@
 
 #center {
 	padding: 0 10px;
+	border: 2px solid red;
 }
 
 input {
