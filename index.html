@@ -17,6 +17,7 @@
 	// Redirect console.log to Evothings Workbench.
 	if (window.hyper && window.hyper.log) { console.log = hyper.log }
 	</script>
+	
 
 </head>
 
@@ -36,6 +37,7 @@
 	<script src="libs/evothings/evothings.js"></script>
 	<script src="libs/evothings/ui/ui.js"></script>
 	<script src="libs/test.js"></script>
+
 
 	<div class='wrapper'>
 
@@ -75,16 +77,19 @@
 					<img class='arrow' src="res/right.png">
 				</div>
 			</div>
-			<div class='button-group' id='slider-container'>
-					<input type="range" min="1" max="100" value="100" class='slider'>
-					<div class='slider-label'>
-						<div>Open</div>
-						<div>Close</div>
-					</div>
-			</div>
 		</div>
-
+		
+		<div class='button-group' id='slider-container'>
+			<p class='group-title'>Grip</p>
+				<input type="range" min="1" max="100" value="50" class='slider' id='grip-slider'>
+				<div class='slider-label'>
+					<div>Open</div>
+					<div class='data' id='grip-data'></div>
+					<div>Close</div>
+				</div>
+		</div>
 	</div>
+	<script src="app.js"></script>
 </body>
 
 </html>
