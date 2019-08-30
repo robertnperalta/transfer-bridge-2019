@@ -1,13 +1,23 @@
 @import '../fonts/ProximaNova.css';
 
 .button-group {
-    display: flex;
+	display: flex;
     width: 100%;
     flex-wrap: wrap;
 	justify-content: space-around;
 	background-color: #8BB8E8;
 	border-radius: 4px;
 	margin: 10px 0;
+	text-align: center;
+}
+
+.vertical {
+	flex-direction: column;
+	width: 40%;
+}
+
+.horizontal {
+	flex-direction: row;
 }
 
 .group-title {
@@ -26,9 +36,11 @@
 
 .button {
     display: inline-block;
-    background-color: lightgray;
+	background-color: lightgray;
+	width: 80px;
+	height: 80px;
 	border-radius: 4px;
-	margin: 10px 0;
+	margin: 10px auto;
 	padding: 7px;
 }
 
@@ -39,6 +51,13 @@
 .arrow {
     height: 80px;
     margin-bottom: -7px;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 /*///////////////////////////////
@@ -144,7 +163,10 @@ html, body {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 body {
-    display: inline-block;
+	/* display: flex;
+	justify-content: space-between;
+	flex-direction: row; */
+	display: inline-block;
 	margin: auto;
 	padding: auto;
 	font-size: 150%;
@@ -177,5 +199,11 @@ section::after {
 		screen and (orientation: landscape) and (min-device-pixel-ratio : 2) {
 	body {
 		font-size: 4vw;
+	}
+	.button-group.vertical {
+		width: 20%;
+	}
+	.button-group.horizontal {
+		width: 70%;
 	}
 }
