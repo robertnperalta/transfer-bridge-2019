@@ -149,7 +149,7 @@ body {
 	padding: auto;
 	font-size: 150%;
     font-size: 7.5vw;
-    width: 100%;
+	width: 100%;
 }
 
 /* Add a top margin to the content corresponding to the height of the header. */
@@ -170,4 +170,12 @@ section::after {
 	display:block;
 	content: '';
 	height: 1em;
+}
+
+@media	screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio : 2),
+		screen and (orientation: landscape) and (min--moz-device-pixel-ratio: 2),
+		screen and (orientation: landscape) and (min-device-pixel-ratio : 2) {
+	body {
+		font-size: 4vw;
+	}
 }
