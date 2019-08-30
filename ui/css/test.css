@@ -8,6 +8,7 @@
 	background-color: #8BB8E8;
 	border-radius: 4px;
 	margin: 10px 0;
+	padding: 8px;
 }
 
 .group-title {
@@ -37,8 +38,39 @@
 }
 
 .arrow {
-    height: 80px;
+    height: 80px; 
     margin-bottom: -7px;
+}
+
+
+#slider-container {
+	flex-direction: column;
+	height: 20%;
+}
+
+input {
+	margin: auto;
+}
+
+.slider {
+	-webkit-appearance: none;
+	height: 5px;
+	width: 90%;
+	border-radius: 4px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #34495E;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.slider-label {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 /*///////////////////////////////
