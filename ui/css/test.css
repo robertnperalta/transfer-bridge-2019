@@ -54,6 +54,16 @@
     margin-bottom: -7px;
 }
 
+.data {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: 50px;
+	background: #ffffff;
+	border-radius: 4px;
+}
+
 .wrapper {
 	display: flex;
 	justify-content: space-around;
@@ -63,11 +73,11 @@
 
 #slider-container {
 	flex-direction: column;
-	height: 20%;
+	height: fit-content;
 }
 
 input {
-	margin: auto;
+	margin: 32px auto;
 }
 
 .slider {
