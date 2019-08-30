@@ -78,7 +78,6 @@
 
 #center {
 	padding: 0 10px;
-	border: 2px solid red;
 }
 
 input {
@@ -133,8 +132,6 @@ header {
 	text-align: center;
 	vertical-align: middle;
 
-	background: #f3f3f3;
-
 	z-index: 1000;
 }
 header button {
@@ -174,6 +171,8 @@ header button.back {
 }
 header button.back img {
 	height: 1.5em;
+	border: 2px solid black;
+	border-radius: 4px;
 }
 header img.logotype {
 	position: absolute;
@@ -181,9 +180,9 @@ header img.logotype {
 	left: 0;
 	right: 0;
 
-	height: 60%;
+	margin: 0 .4em 0 auto;
 
-	margin: 0 auto;
+	height: 60%;
 
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
