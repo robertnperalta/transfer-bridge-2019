@@ -4,7 +4,8 @@
 	display: flex;
     width: 100%;
     flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
 	background-color: #8BB8E8;
 	border-radius: 4px;
 	margin: 10px 0;
@@ -18,7 +19,10 @@
 }
 
 .horizontal {
-	flex-direction: row;
+	display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
 }
 
 .group-title {
@@ -26,6 +30,17 @@
 	margin: 10px 0 5px 0;
 	text-align: center;
 	font-weight: bold;
+}
+
+#center .group-title {
+	text-align: left;
+}
+
+.title-data-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 90%;
 }
 
 .button-row {
@@ -41,7 +56,7 @@
 	width: 80px;
 	height: 80px;
 	border-radius: 4px;
-	margin: 10px auto;
+	margin: 10px 0;
 	padding: 7px;
 }
 
@@ -55,13 +70,14 @@
 }
 
 .data {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 30%;
-	height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 20vw;
+	height: 10vw;
 	background: #ffffff;
 	border-radius: 4px;
+	font-size: 0.6em;
 }
 
 .wrapper {
@@ -94,8 +110,8 @@ input {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: #34495E;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -267,5 +283,9 @@ section::after {
 	.arrow {
 		width: 100%;
 		height: 100%;
+	}
+	.data {
+		width: 20vh;
+		height: 10vh;
 	}
 }
