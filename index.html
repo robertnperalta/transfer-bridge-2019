@@ -35,31 +35,32 @@
 	<script src="cordova.js"></script>
 	<script src="libs/evothings/evothings.js"></script>
 	<script src="libs/evothings/ui/ui.js"></script>
-	<script src="libs/test.js"></script>
+	<script src="app.js"></script>
+	<script src="libs/evothings/easyble/easyble.js"></script>
 
 
-	<div class='wrapper'>
+	<div id='controlsView' class='wrapper' style='display: none'>
 
 		<div id='shoulder' class='button-group vertical'>
 			<p class='group-title'>Shoulder</p>
-			<div class='data'></div>
+			<div id="shoulder_reading" class='data'></div>
 			<div class='button'>
-				<img class='arrow' src="res/up.png">
+				<img id="shoulder_U" class='arrow' src="res/up.png">
 			</div>
 			<div class='button'>
-				<img class='arrow' src="res/down.png">
+				<img id="shoulder_D" class='arrow' src="res/down.png">
 			</div> 
 		</div>
 
 		<div id='elbow' class='button-group vertical'>
 				<p class='group-title'>Elbow</p>
-				<div class='data'></div>
+				<div id="elbow_reading" class='data'></div>
 			<div class='button'>
-				<img class='arrow' src="res/up.png">
+				<img id="elbow_U" class='arrow' src="res/up.png">
 			</div>
 
 			<div class='button'>
-				<img class='arrow' src="res/down.png">
+				<img id="elbow_D" class='arrow' src="res/down.png">
 			</div>
 		</div>
 
@@ -67,14 +68,14 @@
 			<div id='base' class='button-group'>
 				<div class='title-data-row'>
 					<p class='group-title'>Base</p>
-					<div class='data'></div>
+					<div id='base_reading' class='data'></div>
 				</div>
 				<div class='horizontal'><div class='button'>
-						<img class='arrow' src="res/left.png">
+						<img id="base_L" class='arrow' src="res/left.png" ontouchstart="app.sendData([0x06])" ontouchend="app.sendData([0x12])">
 					</div>
 			
 					<div class='button'>
-						<img class='arrow' src="res/right.png">
+						<img id="base_R" class='arrow' src="res/right.png" ontouchstart="app.sendData([0x07])" ontouchend="app.sendData([0x12])">
 					</div>
 				</div>
 			</div>
@@ -82,22 +83,21 @@
 			<div id='grip' class='button-group'>
 				<div class='title-data-row'>
 					<p class='group-title'>Grip</p>
-					<div class='data'></div>
+					<div id='grip_reading' class='data'></div>
 				</div>
 				<div class='horizontal'>
 					<div class='button'>
-						<img class='arrow' src="res/left.png">
+						<img id="grip_L" class='arrow' src="res/left.png" ontouchstart="app.sendData([0x00])" ontouchend="app.sendData([0x12])">
 					</div>
 			
 					<div class='button'>
-						<img class='arrow' src="res/right.png">
+						<img id="grip_R" class='arrow' src="res/right.png" ontouchstart="app.sendData([0x01])" ontouchend="app.sendData([0x12])">
 					</div>
 				</div>
 			</div>
 		</div>
 
 	</div>
-	<script src="app.js"></script>
 </body>
 
 </html>
