@@ -1,0 +1,281 @@
+@import '../fonts/ProximaNova.css';
+
+.button-group {
+	display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: #8BB8E8;
+	border-radius: 4px;
+	margin: 10px 0;
+	text-align: center;
+	padding: 8px;
+}
+
+.vertical {
+	flex-direction: column;
+	width: 40%;
+	height: fit-content;
+}
+
+.horizontal {
+	flex-direction: row;
+	height: fit-content;
+}
+
+.group-title {
+	width: 100%;
+	margin: 10px 0 5px 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+.button-row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button {
+    display: inline-block;
+	background-color: lightgray;
+	width: 7vh;
+	height: 7vh;
+	border-radius: 4px;
+	margin: 10px auto;
+	padding: 7px;
+}
+
+.button p {
+	font-size: .8em;
+}
+
+.arrow {
+	width: 100%;
+	height: 100%;
+    margin-bottom: -7px;
+}
+
+.data {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: 50px;
+	background: #ffffff;
+	border-radius: 4px;
+}
+
+.wrapper,
+.center-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.center-wrapper {
+	justify-content: space-between;
+}
+
+#slider-container {
+	flex-direction: column;
+	height: fit-content;
+}
+
+#center {
+	padding: 0 10px;
+}
+
+input {
+	margin: 32px auto;
+}
+
+.slider {
+	-webkit-appearance: none;
+	height: 5px;
+	width: 90%;
+	border-radius: 4px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #34495E;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.slider-label {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*///////////////////////////////
+//		 Boilerplate CSS	   //
+///////////////////////////////*/
+
+
+/* The header's height is determined by the contained text's font size. */
+header {
+	box-sizing: border-box; /* Width & height includes padding & border. */
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	width: 100%;
+	height: 1.1em;
+
+	/* Left and right margins should correspond to body margins. */
+	margin: 0 0 3.45% 0;
+	/* Left padding should correspond to the back button's width. */
+	padding: 1% 2% 1% 2%;
+
+	font-size: 180%;
+	line-height: 100%;
+	text-align: center;
+	vertical-align: middle;
+
+	z-index: 1000;
+}
+header button {
+	display: block;
+	position: absolute;
+	top: 50%;
+	max-height: 70%;
+
+	margin: 0;
+
+	font-size: 30%;
+
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+header button.back {
+	position: absolute;
+	left: 0;
+
+	height: 100%;
+	margin: 0;
+	padding: 0 0.9em;
+
+	/* Font size is percentage of the header's font size. */
+	font-size: 50%;
+	color: #000;
+
+	text-align: left;
+
+	background: none;
+
+	border-radius: 0;
+	border: none;
+
+	box-shadow: none;
+}
+header button.back img {
+	height: 1.5em;
+	border: 2px solid black;
+	border-radius: 4px;
+}
+header img.logotype {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+
+	margin: 0 .4em 0 auto;
+
+	height: 60%;
+
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+html {
+	padding: 10px;
+}
+html, body {
+	height: 100%;
+
+	font-family: 'Proxima Nova Regular', sans-serif;
+	font-weight: normal;
+
+	background: rgb(255,255,255);
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+	/* display: flex;
+	justify-content: space-between;
+	flex-direction: row; */
+	display: inline-block;
+	margin: auto;
+	padding: auto;
+    font-size: 7.5vw;
+	width: 100%;
+}
+
+/* Add a top margin to the content corresponding to the height of the header. */
+body::before,
+section::before {
+	display: block;
+	width: 100%;
+	height: 1.1em; /* Should correspond to header's height. */
+
+	content: '\0000a0'; /* Non-breaking space (&nbsp;) */
+	font-size: 180%; /* Same as the header's font size. */
+	line-height: 200%; /* Slighly more than the header's line-height. */
+}
+
+/* Add a bottom margin. */
+body::after,
+section::after {
+	display:block;
+	content: '';
+	height: 1em;
+}
+
+@media	screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio : 2),
+		screen and (orientation: landscape) and (min--moz-device-pixel-ratio: 2),
+		screen and (orientation: landscape) and (min-device-pixel-ratio : 2) {
+	body {
+		font-size: 4vw;
+	}
+	.button-group.vertical {
+		width: 20%;
+		height: 90vh;
+	}
+	.center-wrapper {
+		width: 40%;
+		height: 90vh;
+		margin: 10px 0;
+	}
+	#shoulder {
+		order: 1;
+	}
+	#center {
+		order: 2;
+	}
+	#elbow {
+		order: 3;
+	}
+	.button {
+		width: 7vw;
+		height: 7vw;
+	}
+	.arrow {
+		width: 100%;
+		height: 100%;
+	}
+}

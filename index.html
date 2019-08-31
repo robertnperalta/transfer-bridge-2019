@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>Basic Template App</title>
+
+	<style>
+		@import 'ui/css/test.css';
+	</style>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+	
+
+</head>
+
+<body><!-- ontouchstart="" enables low-delay CSS transitions. -->
+
+	<header>
+		<button class="back" onclick="history.back()">
+			<img src="res/left.png" />
+		</button>
+
+		<img class="logotype" src="ui/images/logo.svg" alt="Evothings" />
+
+	</header>
+
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="cordova.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="libs/evothings/ui/ui.js"></script>
+	<script src="libs/test.js"></script>
+
+
+	<div class='wrapper'>
+
+		<div id='shoulder' class='button-group vertical'>
+			<p class='group-title'>Shoulder</p>
+
+			<div class='button'>
+				<img class='arrow' src="res/up.png">
+			</div>
+
+			<div class='button'>
+				<img class='arrow' src="res/down.png">
+			</div>
+		</div>
+
+		<div id='elbow' class='button-group vertical'>
+			<p class='group-title'>Elbow</p>
+
+			<div class='button'>
+				<img class='arrow' src="res/up.png">
+			</div>
+
+			<div class='button'>
+				<img class='arrow' src="res/down.png">
+			</div>
+		</div>
+
+		<div id='center' class='center-wrapper'>
+			<div id='base' class='button-group horizontal'>
+				<p class='group-title'>Base</p>
+		
+				<div class='button'>
+					<img class='arrow' src="res/left.png">
+				</div>
+		
+				<div class='button'>
+					<img class='arrow' src="res/right.png">
+				</div>
+			</div>
+
+			<div class='button-group' id='slider-container'>
+				<p class='group-title'>Grip</p>
+					<input type="range" min="1" max="100" value="50" class='slider' id='grip-slider'>
+					<div class='slider-label'>
+						<div>Open</div>
+						<div class='data' id='grip-data'></div>
+						<div>Close</div>
+					</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="app.js"></script>
+</body>
+
+</html>
+ 
