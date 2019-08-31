@@ -15,10 +15,12 @@
 .vertical {
 	flex-direction: column;
 	width: 40%;
+	height: fit-content;
 }
 
 .horizontal {
 	flex-direction: row;
+	height: fit-content;
 }
 
 .group-title {
@@ -38,8 +40,8 @@
 .button {
     display: inline-block;
 	background-color: lightgray;
-	width: 80px;
-	height: 80px;
+	width: 7vh;
+	height: 7vh;
 	border-radius: 4px;
 	margin: 10px auto;
 	padding: 7px;
@@ -50,7 +52,8 @@
 }
 
 .arrow {
-    height: 80px; 
+	width: 100%;
+	height: 100%;
     margin-bottom: -7px;
 }
 
@@ -64,11 +67,16 @@
 	border-radius: 4px;
 }
 
-.wrapper {
+.wrapper,
+.center-wrapper {
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+
+.center-wrapper {
+	justify-content: space-between;
 }
 
 #slider-container {
@@ -214,7 +222,6 @@ body {
 	display: inline-block;
 	margin: auto;
 	padding: auto;
-	font-size: 150%;
     font-size: 7.5vw;
 	width: 100%;
 }
@@ -247,9 +254,12 @@ section::after {
 	}
 	.button-group.vertical {
 		width: 20%;
+		height: 90vh;
 	}
-	#center.wrapper {
+	.center-wrapper {
 		width: 40%;
+		height: 90vh;
+		margin: 10px 0;
 	}
 	#shoulder {
 		order: 1;
