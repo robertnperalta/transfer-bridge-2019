@@ -100,39 +100,8 @@
 	justify-content: space-between;
 }
 
-#slider-container {
-	flex-direction: column;
-	height: fit-content;
-}
-
 #center {
 	padding: 0 10px;
-}
-
-input {
-	margin: 32px auto;
-}
-
-.slider {
-	-webkit-appearance: none;
-	background: #0000006a;
-	height: 5px;
-	width: 90%;
-	border-radius: 4px;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background: #34495E;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.slider-label {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 }
 
 /*///////////////////////////////
