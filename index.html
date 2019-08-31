@@ -20,17 +20,16 @@
 
 </head>
 
-<body><!-- ontouchstart="" enables low-delay CSS transitions. -->
+<body>
 
 	<header>
 		<button class="back" onclick="history.back()">
 			<img src="res/left.png" />
 		</button>
 
-		<button class="red small disconnect" onclick="app.disconnect()" disabled>Disconnect</button>
+		<button id='disconnect' class="red small" onclick="app.disconnect()" disabled>Disconnect</button>
 
 		<img class="logotype" src="ui/images/logo.svg" alt="Evothings" />
-
 	</header>
 
 	<script src="libs/jquery/jquery.js"></script>
@@ -42,23 +41,33 @@
 
 	<!-- START VIEW -->
 	<div id="startView">
-			<h2 style="text-align:center">Robotic Arm Bluetooth</h2>
-			<img class="center" style="width:50%" src="https://miro.medium.com/max/2000/1*yRJ_Vgs65RzrSZUCvrfnBw.png" alt="robot arm" id='wall-e-img'>
-		
-			<button class="button green" style='width: 100%;' onclick="app.startScan()"> Start </button>
+		<h2 style="text-align:center">Robotic Arm Bluetooth</h2>
+		<img class="center" style="width:50%" src="https://miro.medium.com/max/2000/1*yRJ_Vgs65RzrSZUCvrfnBw.png" alt="robot arm" id='wall-e-img'>
+	
+		<button class="button green" style='width: 100%;' onclick="app.startScan()"> Start </button>
+	</div>
+
+	<!-- SCAN VIEW -->
+	<div id="scanResultView" style="display:none"></div>
+
+	<!-- LOADING VIEW -->
+	<div id="loadingView" style="display:none">
+		<div id="loadingIndicator">
+			<p id="loadingStatus"></p>
+		</div>
 	</div>
 
 	<!-- CONTROL PANEL -->
-	<div class='wrapper' style='display: none'>
+	<div id='controlsView' class='wrapper' style='display: none'>
 
 		<div id='shoulder' class='button-group vertical'>
 			<p class='group-title'>Shoulder</p>
 			<div id="shoulder_reading" class='data'></div>
 			<div class='button'>
-				<img id="shoulder_U" class='arrow' src="res/up.png">
+				<img id="shoulder_U" class='arrow' src="res/up.png" ontouchstart="app.sendData([0x04])" ontouchend="app.sendData([0x12])">
 			</div>
 			<div class='button'>
-				<img id="shoulder_D" class='arrow' src="res/down.png">
+				<img id="shoulder_D" class='arrow' src="res/down.png" ontouchstart="app.sendData([0x05])" ontouchend="app.sendData([0x12])">
 			</div> 
 		</div>
 
@@ -66,11 +75,11 @@
 				<p class='group-title'>Elbow</p>
 				<div id="elbow_reading" class='data'></div>
 			<div class='button'>
-				<img id="elbow_U" class='arrow' src="res/up.png">
+				<img id="elbow_U" class='arrow' src="res/up.png" ontouchstart="app.sendData([0x02])" ontouchend="app.sendData([0x12])">
 			</div>
 
 			<div class='button'>
-				<img id="elbow_D" class='arrow' src="res/down.png">
+				<img id="elbow_D" class='arrow' src="res/down.png" ontouchstart="app.sendData([0x03])" ontouchend="app.sendData([0x12])">
 			</div>
 		</div>
 

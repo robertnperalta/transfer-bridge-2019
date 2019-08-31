@@ -1,22 +1,3 @@
-/* Update displayed data on mobile device*/
-
-/*console.log('Hi robert')
-console.log(document.getElementById('grip-slider'));
-var slider = document.getElementById('grip-slider');
-var grip_data_output = document.getElementById('grip-data');
-
-//initialize grip data output
-console.log('slider.value: ' + slider.value);
-grip_data_output.innerHTML = slider.value;
-
-
-
-slider.oninput = function() {
-    console.log('this.value: ' + this.value)
-    grip_data_output.innerHTML = this.value;
-}
-*/
-
 //GIVEN
 if (window.hyper && window.hyper.log) { console.log = hyper.log }
 
@@ -136,17 +117,13 @@ app.disconnect = function(errorMessage)
 
     console.log('Disconnected');
     //TODO: reset view to front page
+    $('#disconnect').prop('disabled', true);
 	$('#scanResultView').hide();
-	$('#scanResultView').empty();
+    $('#scanResultView').empty();
+    $('#loadingView').hide();
 	$('#controlsView').hide();
 	$('#startView').show();
 
-}
-
-app.test = function()
-{
-    $('#startView').hide();
-    $('#controlsView').show();
 }
 
 //GIVEN
@@ -180,7 +157,8 @@ app.connectTo = function(address)
 
 			$('#loadingView').hide();
 			$('#scanResultView').hide();
-			$('#controlsView').show();
+            $('#controlsView').show();
+            $('#disconnect').prop('disabled', false);
 
 			device.enableNotification(
 			  app.SERVICE_UUID,
