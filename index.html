@@ -43,7 +43,7 @@
 
 		<div id='shoulder' class='button-group vertical'>
 			<p class='group-title'>Shoulder</p>
-
+			<div class='data'></div>
 			<div class='button'>
 				<img class='arrow' src="res/up.png">
 			</div>
@@ -54,8 +54,8 @@
 		</div>
 
 		<div id='elbow' class='button-group vertical'>
-			<p class='group-title'>Elbow</p>
-
+				<p class='group-title'>Elbow</p>
+				<div class='data'></div>
 			<div class='button'>
 				<img class='arrow' src="res/up.png">
 			</div>
@@ -66,26 +66,32 @@
 		</div>
 
 		<div id='center' class='center-wrapper'>
-			<div id='base' class='button-group horizontal'>
-				<p class='group-title'>Base</p>
-		
-				<div class='button'>
-					<img class='arrow' src="res/left.png">
+			<div id='base' class='button-group'>
+				<div class='title-data-row'>
+					<p class='group-title'>Base</p>
+					<div class='data'></div>
 				</div>
-		
-				<div class='button'>
-					<img class='arrow' src="res/right.png">
+				<div class='horizontal'><div class='button'>
+						<img class='arrow' src="res/left.png">
+					</div>
+			
+					<div class='button'>
+						<img class='arrow' src="res/right.png">
+					</div>
 				</div>
 			</div>
 
 			<div class='button-group' id='slider-container'>
-				<p class='group-title'>Grip</p>
-					<input type="range" min="1" max="100" value="50" class='slider' id='grip-slider'>
-					<div class='slider-label'>
-						<div>Open</div>
-						<div class='data' id='grip-data'></div>
-						<div>Close</div>
-					</div>
+				<div class='title-data-row'>
+					<p class='group-title'>Grip</p>
+					<div class='data' id='grip-data'></div>
+				</div>
+				
+				<input type="range" min="1" max="100" value="50" class='slider' id='grip-slider'>
+				<div class='slider-label'>
+					<div>Open</div>
+					<div>Close</div>
+				</div>
 			</div>
 		</div>
 
