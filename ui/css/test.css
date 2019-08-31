@@ -203,6 +203,10 @@ input.btn-group {
 	display: none;
 }
 
+button:disabled {
+	background-color: lightgray !important;
+}
+
 /*  ----------------------------------------------------------
 								COLORS
 	---------------------------------------------------------- */
@@ -455,6 +459,10 @@ header button.back img {
 	height: 1.5em;
 	border: 2px solid black;
 	border-radius: 4px;
+}
+header button.disconnect {
+	position: relative;
+	margin: 0 auto;
 }
 header img.logotype {
 	position: absolute;
