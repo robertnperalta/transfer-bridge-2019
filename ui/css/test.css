@@ -1,5 +1,10 @@
 @import '../fonts/ProximaNova.css';
 
+body {
+	background-color:#000000f0;
+	color: white;
+}
+
 .button-group {
 	display: flex;
   	width: 100%;
@@ -10,7 +15,7 @@
 	margin: 10px 0;
 	text-align: center;
 	padding: 8px;
-	border: 4px solid black;
+	border: 2px solid #56f0db;
 }
 
 .vertical {
@@ -54,12 +59,13 @@
 
 .button {
     display: inline-block;
-	background-color: lightgray;
 	width: 7vh;
 	height: 7vh;
 	border-radius: 4px;
 	margin: 10px 0;
 	padding: 7px;
+	border: 2px solid #56f0db;
+	background: transparent;
 }
 
 .button p {
@@ -69,7 +75,6 @@
 .arrow {
 	width: 100%;
 	height: 100%;
-    margin-bottom: -7px;
 }
 
 .data {
@@ -78,9 +83,10 @@
 	justify-content: center;
 	width: 20vw;
 	height: 10vw;
-	background: #00000010;
-	border-radius: 4px;
-	font-size: 0.6em;
+	background: #2b2e2e;
+    border-radius: 4px;
+    color: white;
+	font-size: 0.8em;
 }
 
 .wrapper,
@@ -159,7 +165,7 @@ input.btn-group + label,
 	display: inline-block;
 	box-sizing: border-box; /* Width & height includes padding & border. */
 
-	font-family: 'Proxima Nova Black';
+	font-family: 'Orbitron', sans-serif;
 	font-size: inherit;
 	line-height: 100%;
 	text-align: center;
@@ -171,11 +177,11 @@ input.btn-group + label,
 	padding: 9px 13px 8px 13px;
 
 	border-radius: 4px;
-	border: none;
+	border: 2px solid #56f0db;
 
 	box-shadow: none;
 
-	background-color: #b9b9b9; 
+	background-color: transparent; 
 } 
 body > button,
 body > input.btn-group + label,
@@ -463,7 +469,6 @@ header button {
 	display: block;
 	position: absolute;
 	top: 50%;
-	max-height: 70%;
 
 	margin: 0;
 
@@ -496,7 +501,8 @@ header button.back {
 }
 header button.back img {
 	height: 1.5em;
-	border: 2px solid black;
+	border: 2px solid#56f0db;
+	background-color: #f0f0f011;
 	border-radius: 4px;
 }
 header button#disconnect {
@@ -522,11 +528,9 @@ html {
 }
 html, body {
 	height: 100%;
-
-	font-family: 'Proxima Nova Regular', sans-serif;
+	font-family: 'Orbitron', sans-serif;
+	/* font-family: 'Proxima Nova Regular', sans-serif; */
 	font-weight: normal;
-
-	background: rgb(255,255,255);
 
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -543,7 +547,7 @@ body {
 	display: inline-block;
 	margin: auto;
 	padding: auto;
-    font-size: 7.5vw;
+    font-size: 5vw;
 	width: 100%;
 }
 
@@ -571,7 +575,7 @@ section::after {
 		screen and (orientation: landscape) and (min--moz-device-pixel-ratio: 2),
 		screen and (orientation: landscape) and (min-device-pixel-ratio : 2) {
 	body {
-		font-size: 4vw;
+		font-size: 3vw;
 	}
 	.button-group.vertical {
 		width: 20%;
