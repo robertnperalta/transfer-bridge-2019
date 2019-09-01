@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no,
 		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
@@ -36,11 +36,13 @@
 	<script src="cordova.js"></script>
 	<script src="libs/evothings/evothings.js"></script>
 	<script src="libs/evothings/ui/ui.js"></script>
-	<script src="app.js"></script>
+	<!-- <script src="app.js"></script> -->
+	<script src="buttons.js"></script>
 	<script src="libs/evothings/easyble/easyble.js"></script>
 
 	<!-- START VIEW -->
-	<div id="startView">
+	<!-- TODO: GET RID OF DISPLAY: NONE-->
+	<div id="startView" style='display: none'>
 		<h2 style="text-align:center">Robotic Arm Bluetooth</h2>
 		<img class="center" style="width:50%" src="https://miro.medium.com/max/2000/1*yRJ_Vgs65RzrSZUCvrfnBw.png" alt="robot arm" id='wall-e-img'>
 	
@@ -58,28 +60,29 @@
 	</div>
 
 	<!-- CONTROL PANEL -->
-	<div id='controlsView' class='wrapper' style='display: none'>
+	<!-- TODO: CHANGE BACK TO DISPLAY: NONE-->
+	<div id='controlsView' class='wrapper'>
 
 		<div id='shoulder' class='button-group vertical'>
 			<p class='group-title'>Shoulder</p>
 			<div id="shoulder_reading" class='data'></div>
-			<div class='button'>
-				<img id="shoulder_U" class='arrow' src="res/up.png" ontouchstart="app.sendData([0x04])" ontouchend="app.sendData([0x12])">
+			<div class='button' id="shoulder_U" ontouchstart='touchdown("#shoulder_U")' ontouchend='touchup("#shoulder_U")'>
+				<img class='arrow' src="res/up.png" ontouchstart="app.sendData([0x04])" ontouchend="app.sendData([0x12])">
 			</div>
-			<div class='button'>
-				<img id="shoulder_D" class='arrow' src="res/down.png" ontouchstart="app.sendData([0x05])" ontouchend="app.sendData([0x12])">
+			<div class='button' id="shoulder_D" ontouchstart='touchdown("#shoulder_D")' ontouchend='touchup("#shoulder_D")'>
+				<img class='arrow' src="res/down.png" ontouchstart="app.sendData([0x05])" ontouchend="app.sendData([0x12])">
 			</div> 
 		</div>
 
 		<div id='elbow' class='button-group vertical'>
 				<p class='group-title'>Elbow</p>
 				<div id="elbow_reading" class='data'></div>
-			<div class='button'>
-				<img id="elbow_U" class='arrow' src="res/up.png" ontouchstart="app.sendData([0x02])" ontouchend="app.sendData([0x12])">
+			<div class='button' id="elbow_U" ontouchstart='touchdown("#elbow_U")' ontouchend='touchup("#elbow_U")'>
+				<img class='arrow' src="res/up.png" ontouchstart="app.sendData([0x02])" ontouchend="app.sendData([0x12])">
 			</div>
 
-			<div class='button'>
-				<img id="elbow_D" class='arrow' src="res/down.png" ontouchstart="app.sendData([0x03])" ontouchend="app.sendData([0x12])">
+			<div class='button' id="elbow_D" ontouchstart='touchdown("#elbow_D")' ontouchend='touchup("#elbow_D")'>
+				<img class='arrow' src="res/down.png" ontouchstart="app.sendData([0x03])" ontouchend="app.sendData([0x12])">
 			</div>
 		</div>
 
@@ -89,12 +92,13 @@
 					<p class='group-title'>Base</p>
 					<div id='base_reading' class='data'></div>
 				</div>
-				<div class='horizontal'><div class='button'>
-						<img id="base_L" class='arrow' src="res/left.png" ontouchstart="app.sendData([0x06])" ontouchend="app.sendData([0x12])">
+				<div class='horizontal'>
+					<div class='button' id="base_L" ontouchstart='touchdown("#base_L")' ontouchend='touchup("#base_L")'>
+						<img class='arrow' src="res/left.png" ontouchstart="app.sendData([0x06])" ontouchend="app.sendData([0x12])">
 					</div>
 			
-					<div class='button'>
-						<img id="base_R" class='arrow' src="res/right.png" ontouchstart="app.sendData([0x07])" ontouchend="app.sendData([0x12])">
+					<div class='button' id="base_R" ontouchstart='touchdown("#base_R")' ontouchend='touchup("#base_R")'>
+						<img class='arrow' src="res/right.png" ontouchstart="app.sendData([0x07])" ontouchend="app.sendData([0x12])">
 					</div>
 				</div>
 			</div>
@@ -105,12 +109,12 @@
 					<div id='grip_reading' class='data'></div>
 				</div>
 				<div class='horizontal'>
-					<div class='button'>
-						<img id="grip_L" class='arrow' src="res/left.png" ontouchstart="app.sendData([0x00])" ontouchend="app.sendData([0x12])">
+					<div class='button' id="grip_L" ontouchstart='touchdown("#grip_L")' ontouchend='touchup("#grip_L")'>
+						<img class='arrow' src="res/left.png" ontouchstart="app.sendData([0x00])" ontouchend="app.sendData([0x12])">
 					</div>
 			
-					<div class='button'>
-						<img id="grip_R" class='arrow' src="res/right.png" ontouchstart="app.sendData([0x01])" ontouchend="app.sendData([0x12])">
+					<div class='button' id="grip_R" ontouchstart='touchdown("#grip_R")' ontouchend='touchup("#grip_R")'>
+						<img class='arrow' src="res/right.png" ontouchstart="app.sendData([0x01])" ontouchend="app.sendData([0x12])">
 					</div>
 				</div>
 			</div>
