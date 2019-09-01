@@ -36,7 +36,7 @@
 	<script src="cordova.js"></script>
 	<script src="libs/evothings/evothings.js"></script>
 	<script src="libs/evothings/ui/ui.js"></script>
-	<!-- <script src="app.js"></script> -->
+	<script src="app.js"></script>
 	<script src="buttons.js"></script>
 	<script src="libs/evothings/easyble/easyble.js"></script>
 
@@ -44,9 +44,9 @@
 	<!-- TODO: GET RID OF DISPLAY: NONE-->
 	<div id="startView">
 		<h2 style="text-align:center">Robotic Arm Bluetooth</h2>
-		<img class="center" style="width:50%" src="https://miro.medium.com/max/2000/1*yRJ_Vgs65RzrSZUCvrfnBw.png" alt="robot arm" id='wall-e-img'>
+		<img class="center" style="width:50%" src="./ui/images/walle.png" alt="robot arm" id='wall-e-img'>
 	
-		<button class="button green" style='width: 100%;' onclick="app.startScan()"> Start </button>
+		<button class="button green" id='start-scan' style='width: 100%;' ontouchstart='touchdown("#start-scan")' ontouchend='touchup("#start-scan")' onclick="app.startScan()"> Start </button>
 	</div>
 
 	<!-- SCAN VIEW -->
@@ -60,8 +60,7 @@
 	</div>
 
 	<!-- CONTROL PANEL -->
-	<!-- TODO: CHANGE BACK TO DISPLAY: NONE-->
-	<div id='controlsView' class='wrapper' style='display: none'>
+	<div id='controlsView' class='wrapper'style="display:none">
 
 		<div id='shoulder' class='button-group vertical'>
 			<p class='group-title'>Shoulder</p>
