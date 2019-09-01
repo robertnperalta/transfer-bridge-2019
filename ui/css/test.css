@@ -1,7 +1,7 @@
 @import '../fonts/ProximaNova.css';
 
 body {
-	background-color:#000000f0;
+	background-color:#000000;
 	color: white;
 }
 
@@ -120,8 +120,7 @@ p.deviceName {
 
 div.deviceContainer {
 	border-radius: 10px;
-	border: 1px solid;
-	border-color: #cccccc;
+	border: 1px solid #2b2e2e;
 	overflow: hidden;
 	margin: 10px 0px;
 }
@@ -508,6 +507,7 @@ header button.back img {
 header button#disconnect {
 	position: relative;
 	margin: 0 auto;
+	border: none;
 }
 header img.logotype {
 	position: absolute;
