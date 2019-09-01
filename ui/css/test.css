@@ -151,6 +151,10 @@ div.deviceContainer {
 	margin: auto;
 }
 
+#start-scan {
+	background: black;
+}
+
 /* EVOTHINGS BUTTONS */
 
 button.clear {
