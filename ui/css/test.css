@@ -520,8 +520,12 @@ header img.logotype {
 	right: 0;
 
 	margin: 0 .4em 0 auto;
+	padding: 2px;
 
 	height: 60%;
+
+	background: white;
+	border-radius: 2px;
 
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
