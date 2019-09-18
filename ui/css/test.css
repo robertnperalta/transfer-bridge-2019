@@ -78,7 +78,6 @@ body {
 	width: 20vw;
 	height: 10vw;
 	border: 2px solid black;
-    color: white;
 	font-size: 0.8em;
 }
 
@@ -113,7 +112,7 @@ p.deviceName {
 
 div.deviceContainer {
 	border-radius: 10px;
-	border: 1px solid #2b2e2e;
+	border: 1px solid black;
 	overflow: hidden;
 	margin: 10px 0px;
 }
@@ -133,7 +132,7 @@ div.deviceContainer {
 	width:20%;
 	display: table-cell;
 	vertical-align: middle;
-	background-color: black;
+	background-color: white;
 }
 
 
@@ -144,9 +143,6 @@ div.deviceContainer {
 	margin: auto;
 }
 
-#start-scan {
-	background: black;
-}
 
 /* EVOTHINGS BUTTONS */
 
