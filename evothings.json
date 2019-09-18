@@ -1,8 +1,8 @@
 {
-  "name": "Skeleton",
+  "name": "Transfer Bridge Skeleton",
   "version": "1.0.0",
-  "title": "Transfer Bridge Code Skeleton",
-  "description": "Basic JS and CSS for the hackathon.",
+  "title": "Hack at Transfer Bridge Skeleton",
+  "description": "Base skeleton for the hackathon.",
   "tags": [],
   "libraries": [
     {
@@ -15,6 +15,6 @@
   "uuid": "38336311-3b04-4a0e-9149-487357d3fa92",
   "icon": "app-icon.png",
   "doc-url": "",
-  "long-description": "Basic JS and CSS for the hackathon.",
+  "long-description": "Blackboxed HTML/CSS and JS for the Transfer Bridge hackathon.",
   "cordova-id": "com.evothings.examples.templatebasicapp"
 }
