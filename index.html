@@ -41,7 +41,7 @@
 	<script src="libs/evothings/easyble/easyble.js"></script>
 
 	<!-- START VIEW -->
-	<div id="startView">
+	<div id="startView" style="display:none">
 		<h2 style="text-align:center">Robotic Arm Bluetooth</h2>
 		<img class="center" style="width:50%" src="./ui/images/walle.png" alt="robot arm" id='wall-e-img'>
 	
@@ -60,55 +60,55 @@
 
 	<!-- CONTROL PANEL -->
 	<!-- modify the code in this section -->
-	<div id='controlsView' class='wrapper' style="display:none">
+	<div id='controlsView' class='wrapper'>
 
-		<div id='shoulder' class='button-group vertical'>
+		<div class='button-group vertical'>
 			<p class='group-title'>Title</p>
-			<div id="shoulder_reading" class='data'></div>
+			<div class='data'></div>
 
-			<div class='button' id="shoulder_U">
+			<div class='button'>
 			</div>
 
-			<div class='button' id="shoulder_D">
+			<div class='button'>
 			</div> 
 		</div>
 
-		<div id='elbow' class='button-group vertical'>
+		<divclass='button-group vertical'>
 			<p class='group-title'>Title</p>
-			<div id="elbow_reading" class='data'></div>
+			<div class='data'></div>
 
-			<div class='button' id="elbow_U">
+			<div class='button'>
 			</div>
 
-			<div class='button' id="elbow_D">
+			<div class='button'>
 			</div>
 		</div>
 
 		<div id='center' class='center-wrapper'>
-			<div id='base' class='button-group'>
+			<div class='button-group'>
 				<div class='title-data-row'>
 					<p class='group-title'>Title</p>
-					<div id='base_reading' class='data'></div>
+					<div class='data'></div>
 				</div>
 				<div class='horizontal'>
-					<div class='button' id="base_L">
+					<div class='button'>
 					</div>
 			
-					<div class='button' id="base_R">
+					<div class='button'>
 					</div>
 				</div>
 			</div>
 
-			<div id='grip' class='button-group'>
+			<div class='button-group'>
 				<div class='title-data-row'>
 					<p class='group-title'>Title</p>
-					<div id='grip_reading' class='data'></div>
+					<div class='data'></div>
 				</div>
 				<div class='horizontal'>
-					<div class='button' id="grip_L">
+					<div class='button'>
 					</div>
 			
-					<div class='button' id="grip_R">
+					<div class='button'>
 					</div>
 				</div>
 			</div>
